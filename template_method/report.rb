@@ -6,16 +6,38 @@ class Report
   end
 
   def output_report
-    p('<html>')
-    p(' <head>')
-    p(" <title>#{@title}</title>")
-    p(' </head>')
-    p(' <body>')
+    output_start
+    output_head
+    output_body_start
+    output_body
+    output_body_end
+    output_end
+  end
+
+  def output_body
     @text.each do |line|
-      p(" <p>#{line}</p>" )
+      output_line(line)
     end
-    p(' </body>')
-    p('</html>')
+  end
+
+  def output_start
+  end
+
+  def output_head
+    raise 'Called abstract method: output_head'
+  end
+
+  def output_body_start
+  end
+
+  def output_line(line)
+    raise 'Called abstract method: output_line'
+  end
+
+  def output_body_end
+  end
+
+  def output_end
   end
 
 end
