@@ -8,8 +8,12 @@ class CompositeCommand
     @commands << command
   end
 
-  def run
+  def up
     @commands.each {|cmd| cmd.execute}
+  end
+
+  def down
+    @commands.reverse.each {|cmd| cmd.unexecute}
   end
 
   def description

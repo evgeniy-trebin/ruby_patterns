@@ -10,4 +10,8 @@ class BaseCommand
     raise 'Method "execute" must be implemented!'
   end
 
+  def unexecute
+    raise 'Method "unexecute" must be implemented!'
+  end
+
 end

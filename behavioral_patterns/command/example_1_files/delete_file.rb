@@ -7,7 +7,17 @@ class DeleteFile < BaseCommand
   end
 
   def execute
-    File.delete(@path)
+    if File.exists?(@path)
+      @content = File.read(@path)
+      File.delete(@path)
+    end
+  end
+
+  def unexecute
+    return if @content.empty?
+    f = File.open(@path,"w")
+    f.write(@content)
+    f.close
   end
 
 end
