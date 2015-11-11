@@ -11,8 +11,6 @@ class Reactor
   end
 
   def fix(result)
-    p result
-    p @right_command
     @functional = result == @right_command
   end
 
