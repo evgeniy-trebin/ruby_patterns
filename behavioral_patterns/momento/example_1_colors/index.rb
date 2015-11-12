@@ -1,6 +1,6 @@
 require_relative 'originator'
 require_relative 'caretaker'
-require_relative 'momento'
+require_relative 'memento'
 
 caretaker = Caretaker.new(Originator.new('RED'))
 p caretaker.get_sate
