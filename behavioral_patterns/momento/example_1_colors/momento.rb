@@ -1,9 +1,9 @@
 class Memento
 
-  attr_reader :state
+  attr_reader :value
 
-  def initialize(state)
-    @state = state
+  def initialize(value)
+    @value = value
   end
 
 end
