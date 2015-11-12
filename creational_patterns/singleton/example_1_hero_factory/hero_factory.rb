@@ -1,11 +1,7 @@
+require 'singleton'
 class HeroFactory
 
-  @@instance = nil
-
-  def self.instance
-    @@instance = HeroFactory.send(:new) unless @@instance
-    @@instance
-  end
+  include Singleton
 
   def create_warrior
     p 'create warrior'
@@ -14,7 +10,5 @@ class HeroFactory
   def create_mage
     p 'create mage'
   end
-
-  private_class_method :new
 
 end
