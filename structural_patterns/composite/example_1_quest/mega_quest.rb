@@ -1,5 +1,5 @@
 require_relative 'composite_quest'
-class Quest
+class MegaQuest
 
   include CompositeQuest
 
