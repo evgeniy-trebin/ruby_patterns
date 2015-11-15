@@ -4,7 +4,7 @@ module CompositeQuest
     @tasks = []
   end
 
-  def add_task(task)
+  def <<(task)
     @tasks << task
   end
 
